@@ -1,7 +1,13 @@
 
+html{
+  scroll-behavior: smooth;
+  scrollbar-color: rgb(124, 82, 119) rgb(124, 82, 119);
+}
 body {
+  margin: 0;
+  padding: 0;
   background-color: rgb(124, 82, 119);
-  color: Black
+  color: Black;
 }
 
 nav {
@@ -26,7 +32,6 @@ footer {
   border-radius: 3%;
 }
 
-
 audio{
   float: left;
   padding: 0px, 2px, 0px, 2px;
@@ -46,11 +51,11 @@ header {
   font-size: 20px;
  }
 .container{
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  
+  display: flex;
+  width: 500px;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px;;
 }
 
 footer{
