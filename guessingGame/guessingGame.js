@@ -34,7 +34,7 @@ console.log(array);
 if(number > array[0]){
     result.innerHTML = "You guessed too high"; 
     result.style.color = "rgba(226, 20, 20, 0.7)";
-    result.style.fontSize = "100px";
+    result.style.fontSize = "50px";
     // this is clearing the input that the user has guessed
     const inputElement = document.getElementById('guessInput'); // Or use querySelector
     inputElement.value = '';       
@@ -45,7 +45,7 @@ else if(number === array[0]){
     // this is change the color of the text
     result.style.color = "rgba(20, 226, 20, 0.7)";
     // this is change the font size of the text
-    result.style.fontSize = "50px";
+    result.style.fontSize = "32px";
     // I need to clear the array so that the user can play again
      array.pop();
     array.push(makeArray());
@@ -54,7 +54,7 @@ else if(number === array[0]){
 else if(number < array[0]){   
     result.innerHTML = "You guessed too low";                                         
     result.style.color = "rgba(9, 28, 237, 0.8)";
-    result.style.fontSize = "100px";
+    result.style.fontSize = "32px";
     const inputElement = document.getElementById('guessInput'); // Or use querySelector
     inputElement.value = '';   
 
@@ -62,7 +62,7 @@ else if(number < array[0]){
 else{
     result.innerHTML = "That isn't a number";
     result.style.color = "rgba(226, 20, 20, 0.7)";
-    result.style.fontSize = "100px";
+    result.style.fontSize = "32px";
     
 }
 }
@@ -71,3 +71,23 @@ let clearArray = (arrayInputs) => {
  arrayInputs = [];
  return arrayInputs;
 }
+
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+      // Function to execute when Enter key is pressed
+      aNumberGuessed()
+    } else if (event.key === ' ') {
+        // Function to execute when SpaceBar is pressed
+        aNumberGuessed()
+    }
+  });
+  
+  function myFunction() {
+    // Code for the function
+    console.log("Enter key was pressed");
+  }
+  
+  function myOtherFunction() {
+      // Code for the other function
+      console.log("Spacebar was pressed");
+  }
